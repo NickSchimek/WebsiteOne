@@ -1,5 +1,4 @@
 @javascript
-@stripe_javascript
 Feature: Update credit card from user profile
   "As a premium user
   So that I am able to continue accessing/paying for cool premium services
@@ -12,6 +11,7 @@ Feature: Update credit card from user profile
     And the following users exist
       | first_name | last_name | email          | latitude | longitude | updated_at   |
       | Alice      | Jones     | alica@mail.com | 59.33    | 18.06     | 1 minute ago |
+
   @stripe_javascript
   Scenario: User decides to change card details
     Given I am logged in as a premium user with name "user", email "user@mail.com", with password "asdf1234"
